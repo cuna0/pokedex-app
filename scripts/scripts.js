@@ -21,5 +21,7 @@ for(i = 0; i < pokemonList.length; i++) {
    if(pokemonList[i].height < 2) {
      document.write(pokemonList[i].name + ', ' + pokemonList[i].height)
     }
-   
+    else {
+      document.write(pokemonList[i].name + pokemonList[i].height + ' Wow, that’s big!')
+    }
  }
