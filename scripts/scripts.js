@@ -17,11 +17,23 @@ let pokemonList = [
     }
 ]; 
 
-for(i = 0; i < pokemonList.length; i++) {
-   if(pokemonList[i].height < 2) {
-     document.write(pokemonList[i].name + ', ' + pokemonList[i].height)
-    }
-    else {
-      document.write(pokemonList[i].name + pokemonList[i].height + ' Wow, that’s big!')
-    }
- }
+pokemonList.forEach(function(pokemon) {
+   document.write(pokemon.name + pokemon.height + pokemon.type);
+ });
+
+ let pokemonRepository = (function () {
+   let pokemonList = [];
+ 
+   function add(pokemon) {
+     pokemonList.push(pokemon);
+   }
+ 
+   function getAll() {
+     return pokemonList;
+   }
+ 
+   return {
+     add: add,
+     getAll: getAll
+   };
+ })();
