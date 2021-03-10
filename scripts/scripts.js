@@ -1,54 +1,34 @@
-let pokemonList = [
-    {
-       name: 'Bulbasaur' ,
-       height: 0.7 ,
-       type: ['grass' , 'poison']
-    }, 
-    { 
-       name: 'Ivysaur' ,
-       height: 1 ,
-       type: ['grass' , 'poison']
+let pokemonRepository = (function (pokemon) {
+  let pokemonList = [ {
+   name: 'Bulbasaur' ,
+   height: 0.7 ,
+   type: ['grass' , 'poison']
+}, 
+{ 
+   name: 'Ivysaur' ,
+   height: 1 ,
+   type: ['grass' , 'poison']
 
-    },
-    {
-       name: 'Venusaur' ,
-       height: 2 ,
-       type: ['grass' , 'poison']
-    }
-]; 
+},
+{
+   name: 'Venusaur' ,
+   height: 2 ,
+   type: ['grass' , 'poison']
+}];
 
-pokemonList.forEach(function(pokemon) {
-   document.write(pokemon.name + pokemon.height + pokemon.type);
- });
+  function add() {
+    pokemonList.push(pokemon);
+  }
 
- let pokemonRepository = (function (pokemon) {
-   let pokemonList = [ {
-    name: 'Bulbasaur' ,
-    height: 0.7 ,
-    type: ['grass' , 'poison']
- }, 
- { 
-    name: 'Ivysaur' ,
-    height: 1 ,
-    type: ['grass' , 'poison']
+  function getAll() {
+    return pokemonList;
+  }
 
- },
- {
-    name: 'Venusaur' ,
-    height: 2 ,
-    type: ['grass' , 'poison']
- }];
- 
-   function add(pokemon) {
-     pokemonList.push(pokemon);
-   }
- 
-   function getAll() {
-     return pokemonList;
-   }
- 
-   return {
-     add: add,
-     getAll: getAll
-   };
- })();
+  return {
+   add: add,
+   getAll: getAll
+ };
+})(); 
+pokemonRepository.getAll().forEach(function(pokemon) {
+ document.write(pokemon.name + pokemon.height + pokemon.type);
+}); 
