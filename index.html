@@ -1,14 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <link rel="stylesheet" href="styles/styles.css">
-    <title>Pokedex</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>repl.it</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	
 </head>
-<body> 
-    <ul class="pokemon-list"></ul>
-    <script src="scripts/scripts.js"></script>
+
+<body>
+
+	<ul class="pokemon-list">
+		<div id="modal-container"></div>
+	</ul>
+
+  <!-- The Modal -->
+  <div id="details-modal" class="modal">
+
+  <!-- Modal content -->
+    <div class="modal-content" id="modal-content">
+      <span class="close" id="close-btn">&times;</span>
+     <div class="modal-body">
+        <h1 id="title"></h1>
+      <img id="img">  
+      <p id="height"></p>  
+           <p id="weight"></p> 
+     </div>
+    </div>
+
+  </div>
+
+	<script src="script.js">
+
+	</script>
 </body>
+
 </html>
