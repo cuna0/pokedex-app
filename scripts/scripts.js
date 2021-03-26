@@ -35,7 +35,7 @@ let pokemonRepository = (function (pokemon) {
   function modal(pokemon) {
     var pTypes = '';
     pokemon.types.forEach(function (item) {
-      pTypes = pTypes + ',' + item.type.name
+      pTypes = pTypes + ', ' + item.type.name
     });
 
     // Get the modal
