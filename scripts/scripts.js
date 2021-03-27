@@ -1,4 +1,4 @@
-let pokemonRepository = (function (pokemon) {
+let pokemonRepository = (function () {
   let pokemonList = [];
 
   function LoadList() {
@@ -39,7 +39,7 @@ let pokemonRepository = (function (pokemon) {
     });
 
     // Get the modal
-    var modal = document.getElementById('pokemonModal');
+    
 
     document.getElementById('title').innerHTML = pokemon.name;
     document.getElementById('img').src = pokemon.imageUrl;
@@ -83,6 +83,7 @@ let pokemonRepository = (function (pokemon) {
     addListItem: addListItem,
     LoadList: LoadList,
   };
+
 })();
 pokemonRepository.LoadList().then(function () {
   pokemonRepository.getAll().forEach(function (pokemon) {
